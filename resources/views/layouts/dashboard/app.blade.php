@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -171,7 +171,13 @@
                             <li>
                                 {{--<!-- inner menu: contains the actual data -->--}}
                                 <ul class="menu">
-                                    
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
