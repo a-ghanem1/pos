@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dashboard' => 'الرئيسيه',
+    'dashboard' => 'الرئيسية',
     'logout' => 'تسجيل الخروج',
 
     'add' => 'اضف',
@@ -21,8 +21,8 @@ return [
 
     'login' => 'تسجيل الدخول',
     'remember_me' => 'تذكرني',
-    'password' => 'كلمه المرور',
-    'password_confirmation' => 'تاكيد كلمه المرور',
+    'password' => 'كلمة المرور',
+    'password_confirmation' => 'تأكيد كلمة المرور',
 
     'added_successfully' => 'تم اضافه البيانات بنجاح',
     'updated_successfully' => 'تم تعديل البيانات بنجاح',
@@ -41,8 +41,8 @@ return [
     'edit_order' => 'تعديل طلب',
 
     'users' => 'المشرفين',
-    'first_name' => 'الاسم الاول',
-    'last_name' => 'الاسم الاخير',
+    'first_name' => 'الإسم الاول',
+    'last_name' => 'الإسم الاخير',
     'email' => 'البريد الاكتروني',
     'image' => 'صوره',
     'action' => 'اكشن',

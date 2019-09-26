@@ -3,15 +3,26 @@
 @section('content')
 	<div class="content-wrapper">
 		<section class="content-header">
-			<h1>Blank page
-				<small>it all starts here</small>
-			</h1>
+			<h1>@lang('site.dashboard')</h1>
 
-			<ol class="breadcrumb"...>
+			<ol class="breadcrumb">
+				<li class="active"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</li>
+			</ol>
 		</section>
 
 		<section class="content">
-			<h1>This is dashnoard</h1>
+			<div class="box box-primary">
+				
+				<div class="box-header with-border">
+					<h3 class="box-title">@lang('site.dashboard')</h3>
+
+					
+				</div>
+
+				<div class="box-body">
+					
+				</div>
+			</div>
 		</section>
 	</div>
 @endsection
