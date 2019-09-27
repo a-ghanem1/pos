@@ -14,20 +14,22 @@ class UserController extends Controller
 {
     
     public function __construct() {
-        $this->middleware(['permission:read-users'])->only('index');
-        $this->middleware(['permission:create-users'])->only('create');
-        $this->middleware(['permission:update-users'])->only('edit');
-        $this->middleware(['permission:delete-users'])->only('destroy');
+        $this->middleware(['permission:read_users'])->only('index');
+        $this->middleware(['permission:create_users'])->only('create');
+        $this->middleware(['permission:update_users'])->only('edit');
+        $this->middleware(['permission:delete_users'])->only('destroy');
     } // end of construct
 
     public function index(Request $request)
     {
 
 
-    	$users = User::whereRoleIs('admin')->when($request->search, function($query) use ($request) {
+    	$users = User::whereRoleIs('admin')->where(    function ($q) use ($request) {
+                return $q->when($request->search, function($query) use ($request) {
 
-                return $query->where('first_name', 'like', '%' . $request->search . '%')->orWhere('last_name', 'like', '%' . $request->search . '%');
-        })->latest()->paginate(2);
+                    return $query->where('first_name', 'like', '%' . $request->search . '%')->orWhere('last_name', 'like', '%' . $request->search . '%');
+                });
+            })->latest()->paginate(2);
 
         return view('dashboard.users.index', compact('users'));
     } // end of index

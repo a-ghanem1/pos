@@ -79,7 +79,7 @@
 
                                             @foreach ($maps as $map)
                                                 {{--create_users--}}
-                                                <label><input type="checkbox" name="permissions[]" {{ $user->hasPermission($map . '-' . $model) ? 'checked' : '' }} value="{{ $map . '-' . $model }}"> @lang('site.' . $map)</label>
+                                                <label><input type="checkbox" name="permissions[]" {{ $user->hasPermission($map . '_' . $model) ? 'checked' : '' }} value="{{ $map . '_' . $model }}"> @lang('site.' . $map)</label>
                                             @endforeach
 
                                         </div>
