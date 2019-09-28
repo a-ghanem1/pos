@@ -11,6 +11,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
 
 			// category routes
 			Route::resource('categories', 'CategoryController')->except(['show']);
+
+			// category routes
+			Route::resource('products', 'ProductController')->except(['show']);
 		});	
 	});
 

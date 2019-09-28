@@ -93,10 +93,11 @@ class UserController extends Controller
 
         if($request->image) {
 
-            if($request->image != 'default.jpg') {
+            if($user->image != 'default.jpg') {
 
                 Storage::disk('public_uploads')->delete('/user_images/' . $user->image);
             } // end of inner if
+            
             $img_name = $request->image->hashName();
             Image::make($request->image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();

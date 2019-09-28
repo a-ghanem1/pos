@@ -53,7 +53,7 @@ return [
     'all_categories' => 'كل الاقسام',
     'name' => 'الاسم',
     'description' => 'الوصف',
-    'products_count' => 'عدد الامنتجات',
+    'products_count' => 'عدد المنتجات',
     'related_products' => 'المنتجات المرتبطه',
     'category' => 'القسم',
     'show_products' => 'عرض المنتجات',
