@@ -1,8 +1,8 @@
 ## Point of sale
 
-1- Import mypos.sql file.
-2- Run <code>php artisan migrate:fresh --seed</code>
+<p>1- Import mypos.sql file.</p>
+<p>2- Run <code>php artisan migrate:fresh --seed.</code></p>
 
-super admin account: superadmin@app.com
-super admin password: 123456
+<p>super admin account: superadmin@app.com</p>
+<p>super admin password: 123456</p>
 
